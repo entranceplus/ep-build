@@ -1,0 +1,8 @@
+(ns entrance-plus.ui)
+
+(defn home-page []
+  [:div "Home"])
+
+(defn about-page []
+  [:div "About"])
+
