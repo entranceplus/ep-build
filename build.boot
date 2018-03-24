@@ -59,16 +59,20 @@
          '[adzerk.boot-cljs-repl :refer :all]
          '[adzerk.boot-reload :refer :all])
 
+(def jar-name  (str "entrance-plus-" version "-standalone.jar"))
+
 (task-options!
  aot {:namespace   #{'entrance-plus.core}}
  jar {:main        'entrance-plus.core
-      :file        (str "entrance-plus-" version "-standalone.jar")}
+      :file        jar-name}
  pom {:project project
-      :version version}
- uber {:exclude #{#"(?i)^META-INF/[^/]*\.(MF|SF|RSA|DSA)$"
-                  #"(?i)^META-INF\\[^/]*\.(MF|SF|RSA|DSA)$"
-                  #"(?i)^META-INF/INDEX.LIST$"
-                  #"(?i)^META-INF\\INDEX.LIST$"}})
+      :version version
+      :license  {"Eclipse Public License"
+                 "http://www.eclipse.org/legal/epl-v10.html"}})
+ ; uber {:exclude #{#"(?i)^META-INF/[^/]*\.(MF|SF|RSA|DSA)$"
+ ;                  #"(?i)^META-INF\\[^/]*\.(MF|SF|RSA|DSA)$"
+ ;                  #"(?i)^META-INF/INDEX.LIST$"
+ ;                  #"(?i)^META-INF\\INDEX.LIST$"}})
 
 (deftask dev
      "run a restartable system"
@@ -88,7 +92,7 @@
 (deftask build
   "Build the project locally as a JAR."
   []
-  (comp (aot) (pom) (uber) (jar) (target)))
+  (comp (aot) (pom) (uber) (jar) (sift :include #{#"entrance-plus-0.1.0-SNAPSHOT-standalone.jar"}) (target)))
 
 (deftask run-project
   "Run the project."

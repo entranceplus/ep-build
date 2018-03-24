@@ -1,9 +1,0 @@
-FROM nginx
-MAINTAINER Akash Shakdwipeea <ashakdwipeea@gmail.com>
-
-
-RUN mkdir /etc/nginx/logs
-
-COPY resources/default.conf /etc/nginx/conf.d/
-
-EXPOSE 80

@@ -27,7 +27,7 @@
 (defn system-config [env]
   (println "system config with env " env)
   [:site-endpoint (component/using (new-endpoint site)
-                                   [:site-middleware])
+                                  [:site-middleware])
    :api-endpoint (component/using (new-endpoint hello-routes)
                                   [:api-middleware])
    :site-middleware (new-middleware {:middleware [[wrap-defaults site-defaults]]})

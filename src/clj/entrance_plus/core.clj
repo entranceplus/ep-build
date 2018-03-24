@@ -14,10 +14,6 @@
 ;; add start fn with id and for all
 ;; add stop fn with id and for all
 ;; separate this into snow
-
-(require '[pyro.printer :as printer])
-(printer/swap-stacktrace-engine!)
-
 ;; (do
 ;;   (require '[orchestra.spec.test :as st])
 ;;   (st/instrument))
@@ -34,14 +30,14 @@
                                            ::sysutil/config {:dbuser "void"
                                                              :db "voidwalker"
                                                              :password "walker"
-                                                             :host "db"
-                                                             :repl-port "8001"
-                                                             :http-port "8000"}}
+                                                             :host "localhost"
+                                                             :repl-port 8001
+                                                             :http-port 8000}}
                                           {::sysutil/system-fn web/system-config
-                                           ::sysutil/config {:http-port "7000"
-                                                             :repl-port "7001"
+                                           ::sysutil/config {:repl-port 7001
+                                                             :http-port 7000
                                                              :dbuser "void"
                                                              :db "voidwalker"
                                                              :password "walker"
-                                                             :host "db"}}]
-                                         :prod? true)))
+                                                             :host "localhost"}}]
+                                         :prod? false)))
