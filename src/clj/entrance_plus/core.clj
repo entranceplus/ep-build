@@ -8,6 +8,8 @@
             [snow.systems :as sysutil]
             [com.stuartsierra.component :as component]))
 
+
+
 ;;todod next
 ;; write spec for system-config
 ;; add init-fn
@@ -20,24 +22,19 @@
 
 (def systems (atom ()))
 
- ;; (sysutil/stop-systems @systems)
+; (sysutil/stop-systems @systems)
 
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
   (println "Starting machines")
-  (reset! systems (sysutil/start-systems [{::sysutil/system-fn void/system-config
-                                           ::sysutil/config {:dbuser "void"
-                                                             :db "voidwalker"
-                                                             :password "walker"
-                                                             :host "localhost"
+  (reset! systems (sysutil/start-systems [{::sysutil/system-fn #'void/system-config
+                                           ::sysutil/config {:db-path "./void-konserve"
                                                              :repl-port 8001
                                                              :http-port 8000}}
-                                          {::sysutil/system-fn web/system-config
+                                          {::sysutil/system-fn #'web/system-config
                                            ::sysutil/config {:repl-port 7001
                                                              :http-port 7000
-                                                             :dbuser "void"
-                                                             :db "voidwalker"
-                                                             :password "walker"
-                                                             :host "localhost"}}]
+                                                             :db-path "./void-konserve"}}
+                                          ]
                                          :prod? false)))
