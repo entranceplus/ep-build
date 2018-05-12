@@ -9,6 +9,8 @@
             [ring.middleware.resource :refer [wrap-resource]]
             [ring.middleware.not-modified :refer [wrap-not-modified]]
             [ring.middleware.content-type :refer [wrap-content-type]]
+            [web.systems :as web]
+            [voidwalker.systems :as voidwalker]
             [snow.systems :as system]
             (system.components
              [immutant-web :refer [new-immutant-web]]
@@ -23,21 +25,6 @@
     (wrap-restful-format handler
                          :formats [:json-kw]
                          :response-options {:json-kw {:pretty true}})))
-
-(defn system-config [env]
-  (println "system config with env " env)
-  [:site-endpoint (component/using (new-endpoint site)
-                                  [:site-middleware])
-   :api-endpoint (component/using (new-endpoint hello-routes)
-                                  [:api-middleware])
-   :site-middleware (new-middleware {:middleware [[wrap-defaults site-defaults]]})
-   :api-middleware (new-middleware
-                    {:middleware  [rest-middleware
-                                   [wrap-defaults api-defaults]]})
-   :handler (component/using (new-handler) [:api-endpoint :site-endpoint])
-   :api-server (component/using (new-immutant-web
-                                 :port (Integer. (env :http-port)))
-                                [:handler])])
 
 (defn dev-system []
   (system/gen-system system-config))

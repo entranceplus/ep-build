@@ -1,0 +1,10 @@
+{:deps {snow {:git/url "https://github.com/entranceplus/snow"
+              :sha "6b959cbc968fb3864a572491066777fce72b332e"}
+        voidwalker {:git/url "https://github.com/entranceplus/voidwalker"
+                    :sha "e4c06a5c0261aee272e36872d59b88b717c03bd8"}
+        web {:git/url "https://github.com/entranceplus/web"
+             :sha "9c5e53955b14ca002b8542a627f7e8fff59c3eb9"}}
+ :paths ["src" "resources"]
+ :aliases {:dev {:extra-paths ["dev"]
+                 :extra-deps {cider/cider-nrepl {:mvn/version "0.18.0-SNAPSHOT"}}
+                 }}}

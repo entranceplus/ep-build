@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/root/project
-ExecStart=/usr/bin/java -jar entrance-plus-0.1.0-SNAPSHOT-standalone.jar
+ExecStart=/usr/bin/java -jar entrance-plus-0.1.0-SNAPSHOT-standalone.jar -m entrance-plus.core
 User=root
 
 [Install]
