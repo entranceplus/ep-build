@@ -7,6 +7,9 @@
 
 (def system-config #{web/system-config voidwalker/system-config})
 
+#_(def system-config ;; #{web/system-config}
+    voidwalker/system-config)
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]

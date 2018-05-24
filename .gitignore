@@ -15,3 +15,12 @@ pom.xml.asc
 .lein-failures
 .nrepl-port
 .nrepl-history
+
+.cpcache
+.shadow-cljs
+docker-compose.yml
+entrance-plus.log
+ep.tar
+resources/public/js/
+void-konserve
+node_modules

@@ -1,2 +1,0 @@
-{:require [entrance-plus.app]
- :compiler-options  {:asset-path "main.out"}}

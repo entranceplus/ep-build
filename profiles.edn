@@ -1,0 +1,5 @@
+{:db-path "./void-konserve"
+ :repl-port 9001
+ :log "entrance-plus.log"
+ :voidwalker.systems/http-port 8000
+ :web.systems/http-port 7000}

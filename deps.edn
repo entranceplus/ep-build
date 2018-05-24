@@ -1,10 +1,17 @@
 {:deps {snow {:git/url "https://github.com/entranceplus/snow"
-              :sha "6b959cbc968fb3864a572491066777fce72b332e"}
+              :sha "ea7ab5b0b1b1405f077fc1f5a2838551ca9f2cea "
+              ;; :local/root "../snow"
+              }
         voidwalker {:git/url "https://github.com/entranceplus/voidwalker"
-                    :sha "e4c06a5c0261aee272e36872d59b88b717c03bd8"}
+                    :sha "bbe69f4c783899b96b896d8cf40f4df1627b922b"
+                    ;; :local/root "../voidwalker"
+                    }
         web {:git/url "https://github.com/entranceplus/web"
-             :sha "9c5e53955b14ca002b8542a627f7e8fff59c3eb9"}}
+             :sha "ea7ab5b0b1b1405f077fc1f5a2838551ca9f2cea "
+             ;; :local/root "../web"
+             }
+        }
  :paths ["src" "resources"]
  :aliases {:dev {:extra-paths ["dev"]
-                 :extra-deps {cider/cider-nrepl {:mvn/version "0.18.0-SNAPSHOT"}}
-                 }}}
+                 :extra-deps {cider/cider-nrepl {:mvn/version "0.18.0-SNAPSHOT"}}}
+           :cljs {:extra-deps {day8.re-frame/re-frame-10x {:mvn/version "0.3.3"}}}}}

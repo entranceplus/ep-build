@@ -5,7 +5,7 @@
             [cider.nrepl :refer [cider-nrepl-handler]]
             
             [shadow.cljs.devtools.server :as server]
-            [entrance-plus.systems :refer [system-config]]
+            [entrance-plus.core :refer [system-config]]
             [shadow.cljs.devtools.api :as shadow]))
 
 ;; (do (require '[expound.alpha :as expound])
@@ -19,6 +19,14 @@
 (defn start! []
   (repl/start! system-config))
 
+(defn restart-systems! []
+  (do (repl/stop!)
+      (repl/start! system-config)))
+
+#_(shadow/release :app)
+
+#_(Restart-systems!)
+
 (defn -main [& args]
-  (nrepl/start-server :port (:repl-port config) :handler cider-nrepl-handler)
+  (shadow/release :app)
   (start!))
