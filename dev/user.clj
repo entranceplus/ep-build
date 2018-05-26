@@ -23,10 +23,16 @@
   (do (repl/stop!)
       (repl/start! system-config)))
 
+#_(do (server/start!)
+      (shadow/dev :app))
+
 #_(shadow/release :app)
 
-#_(Restart-systems!)
+#_(restart-systems!)
 
 (defn -main [& args]
-  (shadow/release :app)
-  (start!))
+  (repl/start-nrepl)
+  (start!)
+  ;; (do (server/start!)
+  ;;     (shadow/dev :app))
+  )

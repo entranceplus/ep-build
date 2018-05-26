@@ -21,6 +21,6 @@ pom.xml.asc
 docker-compose.yml
 entrance-plus.log
 ep.tar
-resources/public/js/
+resources/public/js/cljs-runtime
 void-konserve
 node_modules
