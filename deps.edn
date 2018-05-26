@@ -7,7 +7,7 @@
                     ;; :local/root "../voidwalker"
                     }
         web {:git/url "https://github.com/entranceplus/web"
-             :sha "898de80f2f01e3d65277c4c2b8d4cf931fc66e11"
+             :sha "ca83b5f9369c09f396d4b1bb544ef3f9f92579a5"
              ;; :local/root "../web"
              }
         }
