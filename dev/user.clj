@@ -33,5 +33,6 @@
 (defn -main [& args]
   (repl/start-nrepl)
   (start!)
-  (do (server/start!)
-      (shadow/dev :app)))
+  ;; (do (server/start!)
+  ;;     (shadow/dev :app))
+  )
