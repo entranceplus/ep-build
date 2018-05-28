@@ -3,7 +3,7 @@
               ;; :local/root "../snow"
               }
         voidwalker {:git/url "https://github.com/entranceplus/voidwalker"
-                    :sha "94443fe4e546d23b88b248bbe55e54fe724e8fa4"
+                    :sha "0d6ae38b600eb55a83f1d052e47bf7f90edf2577"
                     ;; :local/root "../voidwalker"
                     }
         web {:git/url "https://github.com/entranceplus/web"
