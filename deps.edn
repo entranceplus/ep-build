@@ -1,9 +1,9 @@
 {:deps {snow {:git/url "https://github.com/entranceplus/snow"
-              :sha "08f820ec5e4fd1164b468ef2279606058b22e564"
+              :sha "fc5a5915f4873112c46693eeff9d2245ee773658"
               ;; :local/root "../snow"
               }
         voidwalker {:git/url "https://github.com/entranceplus/voidwalker"
-                    :sha "9b77cb51f9a46979159374869859f16ea554efc3"
+                    :sha "0c145dac731ee342407474da61f06a185168c886"
                     ;; :local/root "../voidwalker"
                     }
         web {:git/url "https://github.com/entranceplus/web"
