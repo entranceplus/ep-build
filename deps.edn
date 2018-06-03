@@ -5,7 +5,7 @@
         voidwalker {:git/url "https://github.com/entranceplus/voidwalker"
                     :sha "fb9e877a362d52e61e348d9f2b7d5dea9208d6a9"}
         web {:git/url "https://github.com/entranceplus/web"
-             :sha "386903e21b8e7b6a41e5bea93d477fafbe2dc554"}
+             :sha "9d1a797c801ab2e00ecba783e0b5c1083d68edb5"}
         }
  :paths ["src" "resources"]
  :mvn/repos {"jboss" {:url "http://repository.jboss.org/nexus/content/groups/public/"}
