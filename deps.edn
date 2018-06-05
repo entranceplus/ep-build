@@ -1,15 +1,17 @@
 {:deps {snow {:git/url "https://github.com/entranceplus/snow"
-              :sha "d2b9185d38f32e9abee054155f47f36411a5b6be"
-              ;; :local/root "../snow"
-              }
+              :sha "d2b9185d38f32e9abee054155f47f36411a5b6be"}
         voidwalker {:git/url "https://github.com/entranceplus/voidwalker"
                     :sha "fb9e877a362d52e61e348d9f2b7d5dea9208d6a9"}
         web {:git/url "https://github.com/entranceplus/web"
-             :sha "9d1a797c801ab2e00ecba783e0b5c1083d68edb5"}
+             :sha "05b7d3010bcf70640a55c11d770d1a60864e562e"}
         }
  :paths ["src" "resources"]
  :mvn/repos {"jboss" {:url "http://repository.jboss.org/nexus/content/groups/public/"}
              "jitpack" {:url "https://jitpack.io"}}
  :aliases {:dev {:extra-paths ["dev"]
-                 :extra-deps {cider/cider-nrepl {:mvn/version "0.18.0-SNAPSHOT"}}}
+                 ;; :extra-deps {cider/cider-nrepl {:mvn/version "0.18.0-SNAPSHOT"}
+                 ;;              voidwalker {:local/root "../voidwalker"}
+                 ;;              snow {:local/root "../snow"}
+                 ;;              web {:local/root "../web"}}
+                 }
            :cljs {:extra-deps {day8.re-frame/re-frame-10x {:mvn/version "0.3.3-react16"}}}}}
