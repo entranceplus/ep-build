@@ -1,9 +1,9 @@
 {:deps {snow {:git/url "https://github.com/entranceplus/snow"
-              :sha "d2b9185d38f32e9abee054155f47f36411a5b6be"}
+              :sha "333bb3a4c9345a2dd7149e27c8daf70374544506"}
         voidwalker {:git/url "https://github.com/entranceplus/voidwalker"
-                    :sha "fb9e877a362d52e61e348d9f2b7d5dea9208d6a9"}
+                    :sha "b827782f761d0caa9ce9ebce80e026e1ca3413bd"}
         web {:git/url "https://github.com/entranceplus/web"
-             :sha "5d082994f7377f05ad0c2d2426717922eb86c962"}
+             :sha "1e266158ce4cbae2f288c885080699ab9dca278b"}
         }
  :paths ["src" "resources"]
  :mvn/repos {"jboss" {:url "http://repository.jboss.org/nexus/content/groups/public/"}
