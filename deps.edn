@@ -7,7 +7,7 @@
    :sha "3be661d313fc4cfa24074d219c07a28b9ff2f01d"},
   web
   {:git/url "https://github.com/entranceplus/web",
-   :sha "0b87ef14f290e376259dddd1c8ab965721dae6cf"}},
+   :sha "ae5d9ad2522973a79560e301bc88bad23027de87"}},
  :paths ["src" "resources"],
  :mvn/repos
  {"jboss"
